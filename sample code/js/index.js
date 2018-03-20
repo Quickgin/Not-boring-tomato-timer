@@ -3,7 +3,19 @@ var minute,second;
     second=00;
     var int;
 
-
+$(document).ready(function(){
+  $("#startbutton").click(function(){
+  $("#stopbutton").show();
+  $("#resetbutton").show();  
+  $("#startbutton").hide();  
+  });
+  
+$("#stopbutton").click(function(){
+  $("#startbutton").show();
+  $("#resetbutton").show();  
+  $("#stopbutton").hide();  
+  });
+});
 
 
     //重置函数
@@ -32,6 +44,10 @@ function Reset1(){
       minute=25;  
       second=0;
       document.getElementById('timetext').value='25:00';
+       $("#stopbutton").hide();
+  $("#resetbutton").hide();  
+  $("#startbutton").show(); 
+
 }
         	
 function dialogDismissed(buttonIndex) {
@@ -51,7 +67,7 @@ function dialogDismissed(buttonIndex) {
     //计时函数
 function timer()
 {
-    second=second-1;
+        second=second-1; 
         if(second<=00)
         {
             second=59;
@@ -59,7 +75,7 @@ function timer()
         }
     
     if(second==0&&minute==0){
-        stop;
+        stop();
     }
 document.getElementById('timetext').value=minute+':'+second;
 }
