@@ -5,15 +5,15 @@ var minute,second;
 
 $(document).ready(function(){
   $("#startbutton").click(function(){
-  $("#stopbutton").show();
-  $("#resetbutton").show();  
-  $("#startbutton").hide();  
+  $("#stopbutton").show(800);
+  $("#resetbutton").show(800);  
+  $("#startbutton").hide(800);  
   });
   
 $("#stopbutton").click(function(){
-  $("#startbutton").show();
-  $("#resetbutton").show();  
-  $("#stopbutton").hide();  
+  $("#startbutton").show(800);
+  $("#resetbutton").show(800);  
+  $("#stopbutton").hide(800);  
   });
 });
 
@@ -44,9 +44,9 @@ function Reset1(){
       minute=25;  
       second=0;
       document.getElementById('timetext').value='25:00';
-       $("#stopbutton").hide();
-  $("#resetbutton").hide();  
-  $("#startbutton").show(); 
+       $("#stopbutton").hide(800);
+  $("#resetbutton").hide(800);  
+  $("#startbutton").show(800); 
 
 }
         	
