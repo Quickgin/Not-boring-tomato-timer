@@ -76,8 +76,20 @@ function timer()
     
     if(second==0&&minute==0){
         stop();
+		document.getElementById('counttext').value++;
     }
-document.getElementById('timetext').value=minute+':'+second;
+	if(minute>=10&&second>=10){
+		document.getElementById('timetext').value=minute+':'+second;
+	}
+if(minute>=10&&second<10){
+	document.getElementById('timetext').value=minute+':'+'0'+second;
+}
+	if(minute<10&&second>=10){
+	document.getElementById('timetext').value='0'+minute+':'+second;
+}
+	if(minute<10&&second<10){
+	document.getElementById('timetext').value='0'+minute+':'+'0'+second;
+}
 }
 
 
