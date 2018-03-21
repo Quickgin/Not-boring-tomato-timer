@@ -68,7 +68,7 @@ function dialogDismissed(buttonIndex) {
 function timer()
 {
         second=second-1; 
-        if(second<=00)
+        if(second<00)
         {
             second=59;
             minute=minute-1;

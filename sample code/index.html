@@ -35,8 +35,8 @@
     <div style="text-align: center">
   <input type="text" id="timetext" value="25:00" readonly><br>
   <button type="button" onclick="start()" id="startbutton">start</button> 
-  <button type="button" onclick="stop()" id="stopbutton">stop</button> 
-  <button type="button" onclick="Reset()" id="resetbutton">reset</button>
+  <button type="button" onclick="stop()" id="stopbutton" style="display:none">stop</button> 
+  <button type="button" onclick="Reset()" id="resetbutton" style="display:none">reset</button>
 </div>
     </div>
    
@@ -62,15 +62,34 @@
         
   <div data-role="main" class="ui-content">
     <p>This is Page Two.</p>
-
+	  
+<table border="0" white-space="nowrap" width="98%" valign="middle" align="center" cellspacing=20 cellpadding=10>
+    <tr>
+        <td align="center"><img src="timg.jpg" alt="" width="120" height="180"/> 
+		<button style="width:100px;height:30px;margin-top: 10px" type="button" id="detail1">view detail</button>
+		<button style="width:100px;height:30px;margin-top: 10px" type="button" id="collect1">collect it</button> 
+		</td>
+        <td align="center"><img src="timg.jpg" alt="" width="120" height="180"/>
+		<button style="width:100px;height:30px;margin-top: 10px" type="button" id="detail2">view detail</button>
+		<button style="width:100px;height:30px;margin-top: 10px" type="button" id="collect2">collect it</button> 
+		</td>
+    </tr>
+    <tr>
+        <td align="center"><img src="timg.jpg" alt="" width="120" height="180"/></td>
+        <td align="center"><img src="timg.jpg" alt="" width="120" height="180"/></td>
+    </tr>
+</table>
+	  
   </div>
    
+		
   <div data-role="footer">
   <h1>Page Footer</h1>
   </div>
 </div> 
 
 
+	
     
 
 <div data-role="page" id="pagethree">
