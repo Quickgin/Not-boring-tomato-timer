@@ -12,6 +12,7 @@ $(document).on("pagecreate", "#page1", function () {
 		else if ( $(this).val() == "off" ) stopSensor();
 
 	});
+});
 
 function startSensor() {
 	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError,{frequency:500});
@@ -32,7 +33,7 @@ function accelerometerSuccess(acceleration) {
            z = acceleration.z;
            var speed = Math.abs(x +y + z - lastx - lasty - lastz) / diffTime * 10000;
            if (speed > SHAKE_THRESHOLD) {
-               alert("hahaha");  // Do something
+               alert("hahaha"); 
            }
            lastx = x;
            lasty = y;
@@ -44,14 +45,3 @@ function accelerometerSuccess(acceleration) {
 function accelerometerError() {
    alert('Error');
 }
-
-
-
-
-
-
-
-
-
-
-
