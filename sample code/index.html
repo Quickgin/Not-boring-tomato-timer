@@ -11,6 +11,7 @@
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
         <script src="js/toast.js"></script>
+        <script src="js/sensor.js"></script>
 </head>
 
 <body>
@@ -33,6 +34,11 @@
         
   <div data-role="main" class="ui-content">
 
+      <label for="flipswitch">Sensor:</label>
+      	<select name="flipswitch" id="flipswitch" data-role="slider">
+        	<option value="off">Off</option>
+        	<option value="on">On</option>
+      	</select>
     
     <div style="text-align: center">
   <input type="text" id="timetext" value="25:00" readonly style="border-radius:10px;"><br>
@@ -99,6 +105,8 @@
 <div data-role="page" id="detailpage1">  
 <div data-role="header">
   <h1>Page Header</h1>
+    
+    <a href="#pagetwo" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-carat-l ui-btn-icon-left" style="margin-top: 10px">Return</a>
   <div data-role="footer">
   <h1>Page Footer</h1>
   </div>
