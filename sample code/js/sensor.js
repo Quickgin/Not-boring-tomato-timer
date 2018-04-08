@@ -24,9 +24,9 @@ function stopSensor() {
     
 function accelerometerSuccess(acceleration) {
     var curTime = new Date().getTime();
-     if ((curTime-last_update)> 10) {
-          var diffTime = curTime -last_update;
-           last_update = curTime;
+     if ((curTime-last)> 10) {
+          var diffTime = curTime -last;
+           last= curTime;
            x = acceleration.x;
            y = acceleration.y;
            z = acceleration.z;
