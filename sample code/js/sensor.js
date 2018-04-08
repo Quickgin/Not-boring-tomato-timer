@@ -1,4 +1,4 @@
-var SHAKE_THRESHOLD = 4000;
+var SHAKE_THRESHOLD = 3000;
 var watchID;
 var last = 0;
 var x, y, z, lastx = 0, lasty = 0, lastz = 0;
@@ -14,7 +14,7 @@ $(document).on("pagecreate", "#page1", function () {
 	});
 
 function startSensor() {
-	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError);
+	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError,{frequency:500});
 }
 
 function stopSensor() {
