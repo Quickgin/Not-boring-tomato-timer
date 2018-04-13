@@ -8,16 +8,16 @@ $(document).on("pagecreate", "#pageone", function () {
     alert("pageone created");
     
 	//setup listener for the toggle switch
-	$("#flipswitch").on("change", function() {
+	$("#flipswitch").on("change", function(event) {
 		
-		if( $(this).val() == "on" ) {
+       if(this.value == "on" ) {
             startSensor();
-            alert("a");
+           console.log("on");
         }
-		else( $(this).val() == "off" )
+		else
         {
             stopSensor();
-            alert("o");
+            console.log("off");
         }
         
 
