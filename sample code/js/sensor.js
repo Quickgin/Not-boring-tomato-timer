@@ -4,14 +4,23 @@ var last = 0;
 var x, y, z, lastx = 0, lasty = 0, lastz = 0;
 
 $(document).on("pagecreate", "#pageone", function () {
-	
+
+    alert("pageone created");
+    
 	//setup listener for the toggle switch
 	$("#flipswitch").on("change", function() {
-		alert("o");
-		if( $(this).val() == "on" ) startSensor();
-        alert("a");
-		else if ( $(this).val() == "off" ) stopSensor();
+		
+		if( $(this).val() == "on" ) {
+            startSensor();
+            alert("a");
+        }
+		else
+        {
+            stopSensor();
+            alert("o");
+        }
         
+
 	});
 });
 function startSensor() {
