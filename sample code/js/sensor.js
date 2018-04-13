@@ -10,21 +10,20 @@ $(document).on("pagecreate", "#page1", function () {
 		
 		if( $(this).val() == "on" ) startSensor();
 		else if ( $(this).val() == "off" ) stopSensor();
-
+        alert("hjj");
 	});
 });
-alert("hjj");
 function startSensor() {
 	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError,{frequency:500});
+    alert("chou");
 }
-alert("chou");
 function stopSensor() {
 	navigator.accelerometer.clearWatch(watchID);
-
-}
-alert("meicuo");   
+     alert("meicuo");
+} 
 function accelerometerSuccess(acceleration) {
     var curTime = new Date().getTime();
+    alert("lala");
      if ((curTime-last)> 10) {
           var diffTime = curTime -last;
            last= curTime;
