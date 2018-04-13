@@ -13,16 +13,16 @@ $(document).on("pagecreate", "#page1", function () {
 
 	});
 });
-
+alert("hjj");
 function startSensor() {
 	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError,{frequency:500});
 }
-
+alert("chou");
 function stopSensor() {
 	navigator.accelerometer.clearWatch(watchID);
 
 }
-    
+alert("meicuo");   
 function accelerometerSuccess(acceleration) {
     var curTime = new Date().getTime();
      if ((curTime-last)> 10) {
