@@ -7,7 +7,7 @@ $(document).on("pagecreate", "#pageone", function () {
 	
 	//setup listener for the toggle switch
 	$("#flipswitch").on("change", function() {
-		
+		alert("o");
 		if( $(this).val() == "on" ) startSensor();
         alert("a");
 		else if ( $(this).val() == "off" ) stopSensor();
