@@ -14,7 +14,7 @@ $(document).on("pagecreate", "#pageone", function () {
             startSensor();
             alert("a");
         }
-		else
+		else( $(this).val() == "off" )
         {
             stopSensor();
             alert("o");
