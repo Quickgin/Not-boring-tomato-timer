@@ -25,15 +25,12 @@ $(document).on("pagecreate", "#pageone", function () {
 });
 function startSensor() {
 	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError,{frequency:500});
-    alert("b");
 }
 function stopSensor() {
 	navigator.accelerometer.clearWatch(watchID);
-     alert("c");
 } 
 function accelerometerSuccess(acceleration) {
     var curTime = new Date().getTime();
-    alert("d");
      if ((curTime-last)> 10) {
           var diffTime = curTime -last;
            last= curTime;
