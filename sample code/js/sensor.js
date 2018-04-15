@@ -3,26 +3,32 @@ var watchID;
 var last = 0;
 var x, y, z, lastx = 0, lasty = 0, lastz = 0;
 
-$(document).on("pagecreate", "#page1", function () {
-	
+$(document).on("pagecreate", "#pageone", function () {
+
+    alert("pageone created");
+    
 	//setup listener for the toggle switch
-	$("#flipswitch").on("change", function() {
+	$("#flipswitch").on("change", function(event) {
 		
-		if( $(this).val() == "on" ) startSensor();
-		else if ( $(this).val() == "off" ) stopSensor();
+       if(this.value == "on" ) {
+            startSensor();
+           console.log("on");
+        }
+		else
+        {
+            stopSensor();
+            console.log("off");
+        }
+        
 
 	});
 });
-
 function startSensor() {
 	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError,{frequency:500});
 }
-
 function stopSensor() {
 	navigator.accelerometer.clearWatch(watchID);
-
-}
-    
+} 
 function accelerometerSuccess(acceleration) {
     var curTime = new Date().getTime();
      if ((curTime-last)> 10) {
@@ -33,7 +39,7 @@ function accelerometerSuccess(acceleration) {
            z = acceleration.z;
            var speed = Math.abs(x +y + z - lastx - lasty - lastz) / diffTime * 10000;
            if (speed > SHAKE_THRESHOLD) {
-               alert("hahaha"); 
+               alert("e"); 
            }
            lastx = x;
            lasty = y;

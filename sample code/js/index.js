@@ -1,7 +1,8 @@
 var minute,second;
     minute=25;
     second=00;
-    var int;
+    var int count;
+window.localStorage.setItem("count",count);
 
 $(document).ready(function(){
   $("#startbutton").click(function(){
@@ -76,7 +77,8 @@ function timer()
     
     if(second==0&&minute==0){
         stop();
-		document.getElementById('counttext').value++;
+        count=count+1;
+      document.getElementById('counttext').value=localStorage.getItem("count");
     }
 	if(minute>=10&&second>=10){
 		document.getElementById('timetext').value=minute+':'+second;
