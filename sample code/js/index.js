@@ -1,8 +1,6 @@
 var minute,second;
     minute=25;
     second=00;
-    var int count;
-window.localStorage.setItem("count",count);
 
 $(document).ready(function(){
   $("#startbutton").click(function(){
@@ -77,8 +75,7 @@ function timer()
     
     if(second==0&&minute==0){
         stop();
-        count=count+1;
-      document.getElementById('counttext').value=localStorage.getItem("count");
+        count();
     }
 	if(minute>=10&&second>=10){
 		document.getElementById('timetext').value=minute+':'+second;
@@ -95,6 +92,20 @@ if(minute>=10&&second<10){
 }
 
 
+function count(){
+//     localStorage.count= 0;
+ //    var count1 = localStorage.count;
+ //     count1=count1+1;
+  //    document.getElementById('counttext').value=count1;
+     if(typeof(Storage) !== "undefined"){
+         if (localStorage.count) {
+            localStorage.count = Number(localStorage.count)+1;
+        } else {
+            localStorage.count = 0;
+        }
+         document.getElementById("result").innerHTML="Tomato Number:"+localStorage.count;
+     }
+ }
 
 
     //暂停函数
