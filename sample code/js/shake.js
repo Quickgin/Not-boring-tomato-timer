@@ -19,7 +19,7 @@ $(document).on("pagecreate", "#pageone", function () {
 	});
 });
 function startSensor() {
-shake.startWatch(onShake，40，onError);
+shake.startWatch(onShake,40,onError);
 }
 function stopSensor() {
 shake.stopWatch();
