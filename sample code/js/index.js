@@ -6,6 +6,11 @@ $(document).on('pageinit', '#pageone',  function(){
     
 });
 
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.vibrate);
+}
+
 
 var minute,second;
     minute=25;
@@ -71,16 +76,11 @@ function dialogDismissed(buttonIndex) {
     function start()
     {
       int=setInterval(timer,1000);
-	document.addEventListener("deviceready", onDeviceReady, false);
 		console.log("start");
 		 navigator.vibrate();
     }
     //计时函数
-function onDeviceReady() {
-	
-   
-	console.log(navigator.vibrate);
-}
+
 
 
 function timer()
