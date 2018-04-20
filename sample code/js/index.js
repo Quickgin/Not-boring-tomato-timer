@@ -6,10 +6,7 @@ $(document).on('pageinit', '#pageone',  function(){
     
 });
 
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(navigator.vibrate);
-}
+
 
 
 var minute,second;
@@ -76,11 +73,30 @@ function dialogDismissed(buttonIndex) {
     function start()
     {
       int=setInterval(timer,1000);
+		
+		document.addEventListener("deviceready", onDeviceReady, false); 
 		console.log("start");
-		 navigator.vibrate();
     }
     //计时函数
 
+
+function onDeviceReady() {
+    console.log(navigator.vibrate);
+	vibrate();
+}
+
+function vibrate(){
+	navigator.vibrate = navigator.vibrate ||
+                               navigator.webkitVibrate ||
+                               navigator.mozVibrate ||
+                               navigator.msVibrate;
+	if (navigator.vibrate){
+		navigator.vibrate();
+	}
+	else if (navigator.webkitVibrate) {
+            navigator.webkitVibrate();
+        }
+}
 
 
 function timer()
