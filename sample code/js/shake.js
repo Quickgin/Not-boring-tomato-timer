@@ -19,18 +19,23 @@ $(document).on("pagecreate", "#pageone", function () {
 	});
 });
 function startSensor() {
-shake.startWatch(onShake,40,onError);
+    console.log("startSensor");
+    shake.startWatch(onShake,40,onError);
 }
+
 function stopSensor() {
 shake.stopWatch();
 } 
 var onShake = function () {
   // Fired when a shake is detected
-    alert("haha");
+    //alert("haha");
+    console.log("worked");
+    
 };
 
 var onError = function () {
   // Fired when there is an accelerometer error (optional)
     
-    alert("error");
+   // alert("error");
+     console.log("error");
 };
