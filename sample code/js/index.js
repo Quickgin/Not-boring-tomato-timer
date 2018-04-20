@@ -1,3 +1,12 @@
+$(document).on('pageinit', '#pageone',  function(){
+
+    console.log("pageone - pageinit");
+    document.getElementById("result").innerHTML="Tomato Number:"+localStorage.count;
+    
+    
+});
+
+
 var minute,second;
     minute=25;
     second=00;
