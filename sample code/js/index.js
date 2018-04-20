@@ -77,7 +77,7 @@ function dialogDismissed(buttonIndex) {
     //计时函数
 function onDeviceReady() {
 	
-    navigator.vibrate(3000);
+    navigator.vibrate();
 	console.log(navigator.vibrate);
 }
 
