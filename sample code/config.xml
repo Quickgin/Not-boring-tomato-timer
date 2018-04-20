@@ -15,5 +15,7 @@
  <plugin name="cordova-plugin-dialogs"/>
  <plugin name="cordova-plugin-local-notification" version="0.8" />
  <plugin name="cordova-plugin-device-motion" />
- <plugin name="cordova-plugin-shake" />       
+ <plugin name="cordova-plugin-shake" />
+        
+ 
 </widget>

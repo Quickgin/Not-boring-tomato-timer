@@ -32,5 +32,5 @@ var onShake = function () {
 var onError = function () {
   // Fired when there is an accelerometer error (optional)
     
-    alert("Error");
+    alert("error");
 };
