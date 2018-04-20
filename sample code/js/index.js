@@ -71,8 +71,14 @@ function dialogDismissed(buttonIndex) {
     function start()
     {
       int=setInterval(timer,1000);
+	document.addEventListener("deviceready", onDeviceReady, false);
     }
     //计时函数
+function onDeviceReady() {
+    console.log(navigator.vibrate);
+}
+
+
 function timer()
 {
         second=second-1; 
@@ -122,3 +128,16 @@ function count(){
     {
       window.clearInterval(int);
     }
+
+
+
+function detail1(){
+    if (localStorage.count<2)
+	{
+        console.log("not enough");
+    }
+    else if (localStorage.count=2||localStorage.count>2)
+        {
+            window.location.href="#detailpage1";
+        }
+}
