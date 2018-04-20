@@ -6,26 +6,22 @@ $(document).on("pagecreate", "#pageone", function () {
 	$("#flipswitch").on("change", function(event) {
 		
        if(this.value == "on" ) {
-            startSensor();
+            
            console.log("on");
+           shake.startWatch(onShake,40,onError);
         }
 		else
         {
-            stopSensor();
+          
             console.log("off");
+            shake.stopWatch();
         }
         
 
 	});
 });
-function startSensor() {
-    console.log("startSensor");
-    shake.startWatch(onShake,40,onError);
-}
 
-function stopSensor() {
-shake.stopWatch();
-} 
+
 var onShake = function () {
   // Fired when a shake is detected
     //alert("haha");
