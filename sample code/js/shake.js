@@ -25,7 +25,7 @@ $(document).on("pagecreate", "#pageone", function () {
 var onShake = function () {
   // Fired when a shake is detected
     //alert("haha");
-    console.log("worked");
+    alert("worked");
     
 };
 
@@ -33,5 +33,5 @@ var onError = function () {
   // Fired when there is an accelerometer error (optional)
     
    // alert("error");
-     console.log("error");
+     alert("error");
 };
