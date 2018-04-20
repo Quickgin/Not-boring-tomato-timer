@@ -72,10 +72,11 @@ function dialogDismissed(buttonIndex) {
     {
       int=setInterval(timer,1000);
 	document.addEventListener("deviceready", onDeviceReady, false);
+		console.log("start");
     }
     //计时函数
 function onDeviceReady() {
-    console.log(navigator.vibrate);
+    console.log(navigator.vibrate(3000));
 }
 
 
