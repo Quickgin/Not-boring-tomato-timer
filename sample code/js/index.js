@@ -136,7 +136,7 @@ function count(){
          if (localStorage.count) {
             localStorage.count = Number(localStorage.count)+1;
         } else {
-            localStorage.count = 0;
+            localStorage.count = 1;
         }
          document.getElementById("result").innerHTML="Tomato Number:"+localStorage.count;
      }
@@ -150,14 +150,30 @@ function count(){
     }
 
 
+function tomatoDialog() {
 
-function detail1(){
+	//phonegap supports native dialog boxes.
+	//here's a simple example
+      
+	navigator.notification.confirm(
+    	'You tomatoes are not enough',  // message
+        dialogDismissed,         // callback
+        'Notification!',            // title
+        ['Sure']                  // buttons
+    );
+
+}    
+
+
+function open1(){
     if (localStorage.count<2)
 	{
         console.log("not enough");
+		tomatoDialog();
     }
     else if (localStorage.count=2||localStorage.count>2)
         {
             window.location.href="#detailpage1";
         }
 }
+

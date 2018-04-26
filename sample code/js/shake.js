@@ -1,6 +1,5 @@
 $(document).on("pagecreate", "#pageone", function () {
 
-    alert("pageone created");
     
 	//setup listener for the toggle switch
 	$("#flipswitch").on("change", function(event) {
@@ -27,7 +26,7 @@ var onShake = function () {
   // Fired when a shake is detected
     //alert("haha");
     console.log("worked");
-    start();
+    //start();
 };
 
 var onError = function () {
