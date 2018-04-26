@@ -9,6 +9,7 @@ $(document).on("pagecreate", "#pageone", function () {
             
            console.log("on");
            shake.startWatch(onShake,30,onError);
+		   console.log("haha");
         }
 		else
         {
