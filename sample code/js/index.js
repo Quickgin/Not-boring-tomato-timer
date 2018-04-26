@@ -148,21 +148,7 @@ function count(){
     {
       window.clearInterval(int);
     }
-
-
-//function tomatoDialog() {
-
-	//phonegap supports native dialog boxes.
-	//here's a simple example
-      
-	//navigator.notification.confirm(
-    	//'You tomatoes are not enough',  // message
-     // callback
-       // 'Notification!',            // title
-       // ['Sure']                  // buttons
-   // );
-
-//}    
+  
 
 
 function open1(){
