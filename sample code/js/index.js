@@ -150,26 +150,26 @@ function count(){
     }
 
 
-function tomatoDialog() {
+//function tomatoDialog() {
 
 	//phonegap supports native dialog boxes.
 	//here's a simple example
       
-	navigator.notification.confirm(
-    	'You tomatoes are not enough',  // message
-        dialogDismissed,         // callback
-        'Notification!',            // title
-        ['Sure']                  // buttons
-    );
+	//navigator.notification.confirm(
+    	//'You tomatoes are not enough',  // message
+     // callback
+       // 'Notification!',            // title
+       // ['Sure']                  // buttons
+   // );
 
-}    
+//}    
 
 
 function open1(){
     if (localStorage.count<2)
 	{
         console.log("not enough");
-		tomatoDialog();
+		alert("You tomatoes are not enough!");
     }
     else if (localStorage.count=2||localStorage.count>2)
         {
