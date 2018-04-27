@@ -83,21 +83,8 @@ function dialogDismissed(buttonIndex) {
 
 function onDeviceReady() {
     console.log(navigator.vibrate);
-	vibrate();
 }
 
-function vibrate(){
-	navigator.vibrate = navigator.vibrate ||
-                               navigator.webkitVibrate ||
-                               navigator.mozVibrate ||
-                               navigator.msVibrate;
-	if (navigator.vibrate){
-		navigator.vibrate();
-	}
-	else if (navigator.webkitVibrate) {
-            navigator.webkitVibrate();
-        }
-}
 
 
 function timer()
