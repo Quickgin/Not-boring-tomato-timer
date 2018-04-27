@@ -77,30 +77,14 @@ function dialogDismissed(buttonIndex) {
 
 
 
-
-    function start()
-    {
-      int=setInterval(timer,1000);
-		
-		document.addEventListener("deviceready", onDeviceReady, false); 
-		console.log("start");
-			
-		
- }
-
-function onDeviceReady() {
-   
-   
-	
-	   $(document).on("pagecreate", "#pageone", function () {
+   $(document).on("pagecreate", "#pageone", function () {
 
     
 	//setup listener for the toggle switch
 	$("#flipswitch").on("change", function(event) {
 		
        if(this.value == "on" ) {
-            console.log(navigator.vibrate);  
-		   navigator.vibrate(3000);
+          document.addEventListener("deviceready", onDeviceReady, false); 
        
         }
 		else
@@ -111,10 +95,29 @@ function onDeviceReady() {
 
 	});
 });
-	
 
-
+function onDeviceReady() {
+           console.log(navigator.vibrate);  
+		   navigator.vibrate(3000);
+   
 }
+
+
+    function start()
+    {
+      int=setInterval(timer,1000);
+		
+		
+		console.log("start");
+		onDeviceReady();	
+		
+ }
+
+
+
+
+
+
 
 
 function timer()
