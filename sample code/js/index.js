@@ -84,15 +84,8 @@ function dialogDismissed(buttonIndex) {
 		
 		document.addEventListener("deviceready", onDeviceReady, false); 
 		console.log("start");
-		navigator.vibrate(3000);
-    }
-    //计时函数
-
-
-function onDeviceReady() {
-   
-    
-    
+		
+		    
    $(document).on("pagecreate", "#pageone", function () {
 
     
@@ -100,7 +93,8 @@ function onDeviceReady() {
 	$("#flipswitch").on("change", function(event) {
 		
        if(this.value == "on" ) {
-             console.log(navigator.vibrate);
+             
+		   navigator.vibrate(3000);
        
         }
 		else
@@ -111,11 +105,17 @@ function onDeviceReady() {
 
 	});
 });
+		
+		
+ }
 
-    
-    
-    
-    
+
+
+function onDeviceReady() {
+   
+    console.log(navigator.vibrate);
+
+
 }
 
 
