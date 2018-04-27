@@ -84,9 +84,15 @@ function dialogDismissed(buttonIndex) {
 		
 		document.addEventListener("deviceready", onDeviceReady, false); 
 		console.log("start");
+			
 		
-		    
-   $(document).on("pagecreate", "#pageone", function () {
+ }
+
+function onDeviceReady() {
+   
+    console.log(navigator.vibrate);
+	
+	   $(document).on("pagecreate", "#pageone", function () {
 
     
 	//setup listener for the toggle switch
@@ -105,15 +111,7 @@ function dialogDismissed(buttonIndex) {
 
 	});
 });
-		
-		
- }
-
-
-
-function onDeviceReady() {
-   
-    console.log(navigator.vibrate);
+	
 
 
 }
