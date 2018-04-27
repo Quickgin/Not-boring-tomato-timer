@@ -90,7 +90,7 @@ function dialogDismissed(buttonIndex) {
 
 function onDeviceReady() {
    
-    console.log(navigator.vibrate);
+   
 	
 	   $(document).on("pagecreate", "#pageone", function () {
 
@@ -99,7 +99,7 @@ function onDeviceReady() {
 	$("#flipswitch").on("change", function(event) {
 		
        if(this.value == "on" ) {
-             
+            console.log(navigator.vibrate);  
 		   navigator.vibrate(3000);
        
         }
