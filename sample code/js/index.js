@@ -90,9 +90,32 @@ function dialogDismissed(buttonIndex) {
 
 function onDeviceReady() {
     console.log(navigator.vibrate);
-    navigator.vibrate(3000);
-}
+    
+    
+    $(document).on("pagecreate", "#pageone", function () {
 
+    
+	//setup listener for the toggle switch
+	$("#flipswitch").on("change", function(event) {
+		
+       if(this.value == "on" ) {
+            navigator.vibrate(3000);
+       
+        }
+		else
+        {
+            console.log("close vibration");
+        }
+        
+
+	});
+});
+
+    
+    
+    
+    
+}
 
 
 function timer()
