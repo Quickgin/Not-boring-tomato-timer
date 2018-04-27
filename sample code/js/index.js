@@ -77,7 +77,7 @@ function dialogDismissed(buttonIndex) {
 
 function test(){
 
-   $(document).on("pagecreate", "#pageone", function () {
+   $(document).on("pagecreate", "#pagethree", function () {
 
     
 	//setup listener for the toggle switch
