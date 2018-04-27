@@ -22,14 +22,14 @@ $(document).on("pagecreate", "#pageone", function () {
 });
 
 
-var onShake = function () {
+function onShake () {
   // Fired when a shake is detected
     //alert("haha");
     console.log("worked");
     //start();
 };
 
-var onError = function () {
+function onError() {
   // Fired when there is an accelerometer error (optional)
     
    // alert("error");
