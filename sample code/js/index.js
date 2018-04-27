@@ -29,13 +29,13 @@ $("#stopbutton").click(function(){
 });
 
 
-    //重置函数
+
 function Reset()
     {
       createDialog();
       
     }
-    //开始函数
+
 function createDialog() {
 
 	//phonegap supports native dialog boxes.
@@ -83,6 +83,7 @@ function dialogDismissed(buttonIndex) {
 
 function onDeviceReady() {
     console.log(navigator.vibrate);
+    navigator.vibrate(3000);
 }
 
 
