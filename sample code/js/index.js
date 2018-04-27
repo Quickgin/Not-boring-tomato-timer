@@ -92,6 +92,8 @@ function onDeviceReady() {
     console.log(navigator.vibrate);
     
     
+    
+    
     $(document).on("pagecreate", "#pageone", function () {
 
     
