@@ -2,9 +2,16 @@
 
 $(document).on('pageinit', '#pageone',  function(){
     console.log("pageone - pageinit");
-    document.getElementById("result").innerHTML="Tomato Number:"+localStorage.count;
     
+    if(localStorage.count) {
     
+        document.getElementById("result").innerHTML="Tomato Number:"+localStorage.count;
+    }
+    
+    else {
+        localStorage.count = 0;
+        document.getElementById("result").innerHTML="Tomato Number:"+localStorage.count;
+    }
 });
 
 
@@ -100,6 +107,7 @@ function timer()
     if(second==0&&minute==0){
         stop();
         count();
+        navigator.notification.beep(3);	
     }
 	if(minute>=10&&second>=10){
 		document.getElementById('timetext').value=minute+':'+second;
