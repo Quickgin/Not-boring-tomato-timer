@@ -7,8 +7,8 @@ $(document).on("pagecreate", "#pageone", function () {
        if(this.value == "on" ) {
             
            console.log("on");
-           shake.startWatch(onShake,30,onError);
-		   console.log("haha");
+           shake.startWatch(onShake, 40/*, onError*/);
+		   console.log("ok");
         }
 		else
         {
