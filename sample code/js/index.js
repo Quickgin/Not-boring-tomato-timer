@@ -75,7 +75,7 @@ function dialogDismissed(buttonIndex) {
 
 }
 
-
+function test(){
 
    $(document).on("pagecreate", "#pageone", function () {
 
@@ -95,6 +95,7 @@ function dialogDismissed(buttonIndex) {
 
 	});
 });
+}
 
 function onDeviceReady() {
            console.log(navigator.vibrate);  
@@ -109,7 +110,7 @@ function onDeviceReady() {
 		
 		
 		console.log("start");
-		onDeviceReady();	
+		test();	
 		
  }
 
