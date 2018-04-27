@@ -84,24 +84,23 @@ function dialogDismissed(buttonIndex) {
 		
 		document.addEventListener("deviceready", onDeviceReady, false); 
 		console.log("start");
+		navigator.vibrate(3000);
     }
     //计时函数
 
 
 function onDeviceReady() {
-    console.log(navigator.vibrate);
+   
     
     
-    
-    
-    $(document).on("pagecreate", "#pageone", function () {
+   $(document).on("pagecreate", "#pageone", function () {
 
     
 	//setup listener for the toggle switch
 	$("#flipswitch").on("change", function(event) {
 		
        if(this.value == "on" ) {
-            navigator.vibrate(3000);
+             console.log(navigator.vibrate);
        
         }
 		else
