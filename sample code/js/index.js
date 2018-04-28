@@ -60,7 +60,7 @@ function createDialog() {
 function Reset1(){
     window.clearInterval(int);
       minute=25;  
-      second=0;
+      second=00;
       document.getElementById('timetext').value='25:00';
        $("#stopbutton").hide(800);
   $("#resetbutton").hide(800);  
@@ -131,7 +131,7 @@ function timer()
         }
     
     if(second==0&&minute==0){
-        stop();
+        Reset1();
         count();
         navigator.notification.beep(3);	
     }
@@ -178,7 +178,7 @@ function open1(){
     if (localStorage.count<2)
 	{
         console.log("not enough");
-		alert("You tomatoes are not enough!");
+		alert("Your tomatoes are not enough!");
     }
     else if (localStorage.count==2||localStorage.count>2)
         {
@@ -192,7 +192,7 @@ function open2(){
     if (localStorage.count<4)
 	{
         console.log("not enough");
-		alert("You tomatoes are not enough!");
+		alert("Your tomatoes are not enough!");
     }
     else if (localStorage.count==4||localStorage.count>4)
         {
@@ -204,7 +204,7 @@ function open3(){
     if (localStorage.count<6)
 	{
         console.log("not enough");
-		alert("You tomatoes are not enough!");
+		alert("Your tomatoes are not enough!");
     }
     else if (localStorage.count==6||localStorage.count>6)
         {
@@ -217,7 +217,7 @@ function open4(){
     if (localStorage.count<8)
 	{
         console.log("not enough");
-		alert("You tomatoes are not enough!");
+		alert("Your tomatoes are not enough!");
     }
     else if (localStorage.count==8||localStorage.count>8)
         {
