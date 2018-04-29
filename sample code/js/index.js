@@ -61,7 +61,8 @@ function Reset1(){
     window.clearInterval(int);
       minute=25;  
       second=00;
-      document.getElementById('timetext').value='25:00';
+      //document.getElementById('timetext').value='25:00';
+	document.getElementById('number').innerHTML='25:00';
        $("#stopbutton").hide(800);
   $("#resetbutton").hide(800);  
   $("#startbutton").show(800); 
@@ -85,7 +86,7 @@ function test(){
 		
        if(this.value == "on" ) {
           document.addEventListener("deviceready", onDeviceReady, false); 
-       
+          console.log("open vibration");
         }
 		else
         {
@@ -136,16 +137,20 @@ function timer()
         navigator.notification.beep(3);	
     }
 	if(minute>=10&&second>=10){
-		document.getElementById('timetext').value=minute+':'+second;
+		document.getElementById('number').style.fontSize= "48";
+		document.getElementById('number').innerHTML=minute+':'+second;
 	}
 if(minute>=10&&second<10){
-	document.getElementById('timetext').value=minute+':'+'0'+second;
+	document.getElementById('number').style.fontSize= "48";
+	document.getElementById('number').innerHTML=minute+':'+'0'+second;
 }
 	if(minute<10&&second>=10){
-	document.getElementById('timetext').value='0'+minute+':'+second;
+	document.getElementById('number').style.fontSize= "48";
+	document.getElementById('number').innerHTML='0'+minute+':'+second;
 }
 	if(minute<10&&second<10){
-	document.getElementById('timetext').value='0'+minute+':'+'0'+second;
+	document.getElementById('number').style.fontSize= "48";
+    document.getElementById('number').innerHTML='0'+minute+':'+'0'+second;
 }
 }
 
