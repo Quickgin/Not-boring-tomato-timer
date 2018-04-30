@@ -78,7 +78,7 @@ function dialogDismissed(buttonIndex) {
 
 function test(){
 
-   $(document).on("pagecreate", "#pagethree", function () {
+   //$(document).on("pagecreate", "#pagethree", function () {
 
     
 	//setup listener for the toggle switch
@@ -95,7 +95,7 @@ function test(){
         
 
 	});
-});
+//});
 }
 
 function onDeviceReady() {
