@@ -24,9 +24,7 @@ $(document).on("pagecreate", "#pageone", function () {
 
 var onShake = function  () {
   // Fired when a shake is detected
-    //alert("haha");
     console.log("worked");
-    //start();
 };
 
 var onError = function () {
