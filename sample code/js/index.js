@@ -2,7 +2,7 @@
 
 $(document).on('pageinit', '#pageone',  function(){
     console.log("pageone - pageinit");
-    
+    alert("Notice:Do not cut the program to the backstage when the timer is running!");
     if(localStorage.count) {
     
         document.getElementById("result").innerHTML="Tomato Number:"+localStorage.count;
@@ -200,7 +200,7 @@ function open2(){
     }
     else if (localStorage.count==4||localStorage.count>4)
         {
-            window.location.href="#detailpage1";
+            window.location.href="#detailpage2";
         }
 }
 
@@ -212,7 +212,7 @@ function open3(){
     }
     else if (localStorage.count==6||localStorage.count>6)
         {
-            window.location.href="#detailpage1";
+            window.location.href="#detailpage3";
         }
 }
 
@@ -225,6 +225,6 @@ function open4(){
     }
     else if (localStorage.count==8||localStorage.count>8)
         {
-            window.location.href="#detailpage1";
+            window.location.href="#detailpage4";
         }
 }
