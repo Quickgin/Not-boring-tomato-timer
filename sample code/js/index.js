@@ -1,11 +1,11 @@
-var vibrateEnabled = true;
-var soundEnabled = true;
+var vibrateEnabled = false;
+var soundEnabled = false;
 
-//e-mail
-cordova.plugins.email.open({
-    app: 'mailto',
-    subject: 'Sent with mailto'
-})
+////e-mail
+//cordova.plugins.email.open({
+//    app: 'mailto',
+//    subject: 'Sent with mailto'
+//});
 
 
 
