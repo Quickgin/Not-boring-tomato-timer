@@ -1,5 +1,5 @@
 var vibrateEnabled = false;
-
+var soundEnabled = false;
 
 $(document).on('pageinit', '#pageone',  function(){
     console.log("pageone - pageinit");
@@ -94,7 +94,27 @@ $(document).on("pagecreate", "#pagethree", function () {
             console.log("close vibration");
             vibrateEnabled = false;
         }
-       
+
+});
+});
+
+
+$(document).on("pagecreate", "#pagethree", function () {
+
+
+	//setup listener for the toggle switch
+	$("#flipswitch1").on("change", function(event) {
+		
+      if(this.value == "on" ) {
+        
+        console.log("open vibration");
+          soundEnabled = true;
+        }
+		else
+        {
+            console.log("close vibration");
+            soundEnabled = false;
+        }
 
 });
 });
@@ -110,7 +130,12 @@ $(document).on("pagecreate", "#pagethree", function () {
             //set vibration
             navigator.vibrate(3000);
         }
+       
         
+       if(soundEnabled) {
+            //set vibration
+            navigator.notification.beep(3);
+        }
  }
 
 
