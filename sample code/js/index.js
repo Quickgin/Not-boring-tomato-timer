@@ -1,3 +1,4 @@
+var vibrateEnabled = false;
 
 
 $(document).on('pageinit', '#pageone',  function(){
@@ -77,41 +78,39 @@ function dialogDismissed(buttonIndex) {
 }
 
 
- //  $(document).on("pagecreate", "#pagethree", function () {
+$(document).on("pagecreate", "#pagethree", function () {
 
-  function onoff()  
-{
+
 	//setup listener for the toggle switch
 	$("#flipswitch").on("change", function(event) {
 		
       if(this.value == "on" ) {
-         document.addEventListener("deviceready", onDeviceReady, false); 
+        
         console.log("open vibration");
+          vibrateEnabled = true;
         }
 		else
         {
             console.log("close vibration");
+            vibrateEnabled = false;
         }
        
 
-//	});
 });
-}
-
-function onDeviceReady() {
-           console.log(navigator.vibrate);  
-		   navigator.vibrate(3000);
-   
-}
+});
 
 
     function start()
     {
       int=setInterval(timer,1000);
 		
-		console.log("start");
-		onoff();
+		console.log("start " +vibrateEnabled );
 		
+        if(vibrateEnabled) {
+            //set vibration
+            navigator.vibrate(3000);
+        }
+        
  }
 
 
