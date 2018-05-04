@@ -248,15 +248,15 @@ function open4(){
 
 
 
-//e-mail
-function email(){
-    alert("creating email");
-    cordova.plugins.email.open({
-	app: 'mailto',
-    to:      'WANL2_15@uni.worc.ac.uk',
-    subject: 'A SUBJECT',
-    body:    'An e-mail body'
-    //isHtml:  true
-});
-}
+////e-mail
+//function email(){
+//    alert("creating email");
+//    cordova.plugins.email.open({
+//	app: 'mailto',
+//    to:      'WANL2_15@uni.worc.ac.uk',
+//    subject: 'A SUBJECT',
+//    body:    'An e-mail body'
+//    //isHtml:  true
+//});
+//}
 
