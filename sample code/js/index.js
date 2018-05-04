@@ -1,5 +1,15 @@
-var vibrateEnabled = false;
-var soundEnabled = false;
+var vibrateEnabled = true;
+var soundEnabled = true;
+
+//e-mail
+cordova.plugins.email.open({
+    app: 'mailto',
+    subject: 'Sent with mailto'
+})
+
+
+
+
 
 $(document).on('pageinit', '#pageone',  function(){
     console.log("pageone - pageinit");
@@ -127,17 +137,14 @@ $(document).on("pagecreate", "#pagethree", function () {
             navigator.vibrate(3000);
         }
        
-        
-       if(soundEnabled) {
-            //set vibration
-            navigator.notification.beep(3);
-        }
  }
 
-
-
-
-
+   function sound(){
+        if(soundEnabled) {
+            //set deep
+            navigator.notification.beep(3);
+        }
+   }
 
 
 
@@ -153,7 +160,7 @@ function timer()
     if(second==0&&minute==0){
         Reset1();
         count();
-        navigator.notification.beep(3);	
+        sound();	
     }
 	if(minute>=10&&second>=10){
 		document.getElementById('number').style.fontSize= "48";
@@ -175,10 +182,6 @@ if(minute>=10&&second<10){
 
 
 function count(){
-//     localStorage.count= 0;
- //    var count1 = localStorage.count;
- //     count1=count1+1;
-  //    document.getElementById('counttext').value=count1;
      if(typeof(Storage) !== "undefined"){
          if (localStorage.count) {
             localStorage.count = Number(localStorage.count)+1;
@@ -190,7 +193,7 @@ function count(){
  }
 
 
-    //暂停函数
+    //stop button
     function stop()
     {
       window.clearInterval(int);
