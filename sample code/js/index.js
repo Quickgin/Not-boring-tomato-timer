@@ -253,8 +253,9 @@ function email(){
     alert("creating email");
     cordova.plugins.email.open({
     to:      'WANL2_15@uni.worc.ac.uk',
-    subject: "A SUBJECT",
-    isHtml:  true
+    subject: 'A SUBJECT',
+    body:    'How are you? Nice greetings from Leipzig'
+    //isHtml:  true
 });
 }
 
