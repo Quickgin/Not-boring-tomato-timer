@@ -252,9 +252,10 @@ function open4(){
 function email(){
     alert("creating email");
     cordova.plugins.email.open({
+	app: 'mailto',
     to:      'WANL2_15@uni.worc.ac.uk',
     subject: 'A SUBJECT',
-    body:    'How are you? Nice greetings from Leipzig'
+    body:    'An e-mail body'
     //isHtml:  true
 });
 }
