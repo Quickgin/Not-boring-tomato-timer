@@ -96,14 +96,8 @@ $(document).on("pagecreate", "#pagethree", function () {
         }
 
 });
-});
-
-
-$(document).on("pagecreate", "#pagethree", function () {
-
-
-	//setup listener for the toggle switch
-	$("#flipswitch1").on("change", function(event) {
+    
+    $("#soundswitch").on("change", function(event) {
 		
       if(this.value == "on" ) {
         
@@ -117,6 +111,8 @@ $(document).on("pagecreate", "#pagethree", function () {
         }
 
 });
+    
+    
 });
 
 
