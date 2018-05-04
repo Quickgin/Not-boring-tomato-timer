@@ -1,15 +1,6 @@
 var vibrateEnabled = false;
 var soundEnabled = false;
 
-////e-mail
-//cordova.plugins.email.open({
-//    app: 'mailto',
-//    subject: 'Sent with mailto'
-//});
-
-
-
-
 
 $(document).on('pageinit', '#pageone',  function(){
     console.log("pageone - pageinit");
@@ -251,3 +242,19 @@ function open4(){
             window.location.href="#detailpage4";
         }
 }
+
+
+
+
+
+
+//e-mail
+function email(){
+    cordova.plugins.email.open({
+    to:      'WANL2_15@uni.worc.ac.uk',
+    subject: 'From'+ document.getElementById("inputname").innerHTML,
+    body:    document.getElementById("inputcontent").innerHTML,
+    isHtml:  true
+});
+}
+
