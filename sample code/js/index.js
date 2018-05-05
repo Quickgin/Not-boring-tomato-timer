@@ -20,8 +20,8 @@ $(document).on('pageinit', '#pageone',  function(){
 
 
 var minute,second;
-    //minute=25;
-    minute=02;
+    minute=25;
+//    minute=02;
     second=00;
 
 $(document).ready(function(){
@@ -62,14 +62,14 @@ function createDialog() {
 
 function Reset1(){
     window.clearInterval(int);
-      //minute=25;  
-	  minute=02;
+      minute=25;  
+//	  minute=02;
       second=00;
       //document.getElementById('timetext').value='25:00';
 	
 	
-	//document.getElementById('number').innerHTML='25:00';
-	document.getElementById('number').innerHTML='02:00';
+	document.getElementById('number').innerHTML='25:00';
+//	document.getElementById('number').innerHTML='02:00';
        $("#stopbutton").hide(800);
   $("#resetbutton").hide(800);  
   $("#startbutton").show(800); 
