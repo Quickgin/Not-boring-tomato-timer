@@ -2,6 +2,9 @@ var vibrateEnabled = false;
 var soundEnabled = false;
 
 
+
+//code based on Jquerymobile (2018), ‘pageinit’. [online] Available at: https://api.jquerymobile.com/pageinit/ (Accessed: 20 April 2018)
+
 $(document).on('pageinit', '#pageone',  function(){
     console.log("pageone - pageinit");
     alert("Notice:Do not cut the program to the backstage when the timer is running!");
@@ -39,17 +42,17 @@ $("#stopbutton").click(function(){
 });
 
 
-
+//reset timer
+//code based on w3schools (2018), ‘JavaScript Timing Events’. [online] Available at: https://www.w3schools.com/js/js_timing.asp (Accessed: 16 April 2018)
 function Reset()
     {
       createDialog();
       
     }
 
-function createDialog() {
 
-	//phonegap supports native dialog boxes.
-	//here's a simple example
+//notification
+function createDialog() {
       
 	navigator.notification.confirm(
     	'Are you sure to reset the timer?',  // message
@@ -84,10 +87,12 @@ function dialogDismissed(buttonIndex) {
 }
 
 
+
+
 $(document).on("pagecreate", "#pagethree", function () {
 
-
-	//setup listener for the toggle switch
+	
+	//switch for vibration
 	$("#flipswitch").on("change", function(event) {
 		
       if(this.value == "on" ) {
@@ -103,6 +108,8 @@ $(document).on("pagecreate", "#pagethree", function () {
 
 });
     
+	
+	//switch for sound
     $("#soundswitch").on("change", function(event) {
 		
       if(this.value == "on" ) {
@@ -122,6 +129,7 @@ $(document).on("pagecreate", "#pagethree", function () {
 });
 
 
+//start timer
     function start()
     {
       int=setInterval(timer,1000);
@@ -135,7 +143,13 @@ $(document).on("pagecreate", "#pagethree", function () {
        
  }
 
-   function sound(){
+   
+
+
+
+
+//control sound
+function sound(){
         if(soundEnabled) {
             //set deep
             navigator.notification.beep(3);
@@ -177,6 +191,9 @@ if(minute>=10&&second<10){
 }
 
 
+
+//count the tomatoes
+//code based on w3schools (2018), ‘Window localStorage Property’. [online] Available at: https://www.w3schools.com/jsref/prop_win_localstorage.asp (Accessed: 20 April 2018)
 function count(){
      if(typeof(Storage) !== "undefined"){
          if (localStorage.count) {
@@ -197,6 +214,8 @@ function count(){
   
 
 
+
+//open the picture in card shop
 function open1(){
     if (localStorage.count<2)
 	{
