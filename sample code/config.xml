@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.phonegap.timerdemo"
+        id          = "com.phonegap.tomatotimer"
         versionCode = "10" 
         version     = "1.0.0" >
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Timer Demo</name>
+    <name>Not boring tomato timer</name>
 	
 	
 <preference name='phonegap-version' value='cli-7.0.1' />	
@@ -17,5 +17,5 @@
 <!-- <plugin name="cordova-plugin-device-motion" /> -->
  <!--<plugin name="cordova-plugin-shake" source="npm"/>-->
  <plugin name="cordova-plugin-vibration" version="3.1.0" /> 
- <gap:plugin name="cordova-plugin-email-composer" version="0.8.3" source="npm" />
+<!-- <gap:plugin name="cordova-plugin-email-composer" version="0.8.3" source="npm" />-->
 </widget>
